@@ -2,26 +2,26 @@ class Dpty < Formula
   desc "Durable PTY (dpty): sessions that outlive your app, as a daemon, CLI and MCP server"
   homepage "https://jasonkneen.github.io/durable-pty/"
   license "MIT"
-  version "0.1.1"
+  version "0.1.2"
 
   on_macos do
     on_arm do
-      url "https://github.com/jasonkneen/durable-pty/releases/download/v0.1.1/dpty-aarch64-apple-darwin.tar.gz"
-      sha256 "acbac2be580f42ed4d2e7b6a24be15dfd883126ec84a30c3888470f7274b34fd"
+      url "https://github.com/jasonkneen/durable-pty/releases/download/v0.1.2/dpty-aarch64-apple-darwin.tar.gz"
+      sha256 "d28d923d4f0b39840322a8e8bbc2cededa1af5f77041074bb22025a9e20105c5"
     end
     on_intel do
-      url "https://github.com/jasonkneen/durable-pty/releases/download/v0.1.1/dpty-x86_64-apple-darwin.tar.gz"
-      sha256 "28a0b87fca02758581da2aee5a9ffecbe8eab3875eadf398314067f5ed2fb2ca"
+      url "https://github.com/jasonkneen/durable-pty/releases/download/v0.1.2/dpty-x86_64-apple-darwin.tar.gz"
+      sha256 "55b98a4717db3675424a9fa88665a6edab32b66de6ea60078dd051c622c99aca"
     end
   end
   on_linux do
     on_arm do
-      url "https://github.com/jasonkneen/durable-pty/releases/download/v0.1.1/dpty-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "8f8b48d56311d6ad64ac7e673161c4c2a8835f329d16810f1b4f0b0e40bcec5c"
+      url "https://github.com/jasonkneen/durable-pty/releases/download/v0.1.2/dpty-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "c1ce7968b46e73fb3a033aae8e623d72b4301761f5c81f4845c7884095b1d416"
     end
     on_intel do
-      url "https://github.com/jasonkneen/durable-pty/releases/download/v0.1.1/dpty-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "1d796e230cb71e70adb9af8619d05e9424e34208810d15004211b6b034fbb416"
+      url "https://github.com/jasonkneen/durable-pty/releases/download/v0.1.2/dpty-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "a4b9ea09532b59399485f4b8d4d77e2d30fec558a20e1040ab5f5e65df2050ed"
     end
   end
 
