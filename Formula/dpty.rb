@@ -2,8 +2,8 @@ class Dpty < Formula
   desc "Durable PTY (dpty): sessions that outlive your app, as a daemon, CLI and MCP server"
   homepage "https://jasonkneen.github.io/durable-pty/"
   license "MIT"
-  # No release has been cut yet: install the development version with `brew install --HEAD jasonkneen/tap/dpty`.
-  # The release workflow replaces this file with a versioned formula.
+  version "0.1.0"
+  url "https://github.com/jasonkneen/durable-pty.git", tag: "v0.1.0", revision: "cabc2b18170d0901e78b9c8b7ac03cb199f1ad18"
   head "https://github.com/jasonkneen/durable-pty.git", branch: "main"
 
   depends_on "rust" => :build
@@ -12,6 +12,7 @@ class Dpty < Formula
     system "cargo", "install", *std_cargo_args
   end
 
+  # `brew services start dpty` runs the daemon at login. `dpty install` does the same without Homebrew.
   service do
     run [opt_bin/"dpty", "serve"]
     keep_alive true
@@ -22,5 +23,6 @@ class Dpty < Formula
 
   test do
     assert_match "dpty", shell_output("#{bin}/dpty --version")
+    assert_match "not running", shell_output("DPTY_HOME=#{testpath}/home #{bin}/dpty status", 3)
   end
 end
