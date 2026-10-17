@@ -3,8 +3,8 @@ class Dpty < Formula
   homepage "https://jasonkneen.github.io/durable-pty/"
   license "MIT"
   version "0.1.0"
-  url "https://github.com/jasonkneen/durable-pty.git", tag: "v0.1.0", revision: "cabc2b18170d0901e78b9c8b7ac03cb199f1ad18"
-  head "https://github.com/jasonkneen/durable-pty.git", branch: "main"
+  url "ssh://git@github.com/jasonkneen/durable-pty.git", tag: "v0.1.0", revision: "cabc2b18170d0901e78b9c8b7ac03cb199f1ad18"
+  head "ssh://git@github.com/jasonkneen/durable-pty.git", branch: "main"
 
   depends_on "rust" => :build
 
